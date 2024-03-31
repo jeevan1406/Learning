@@ -28,7 +28,13 @@
                 (click)="onServerCreate()"
                 >Add Server</button>
                 <br>
-                <p>{{ serverCreationStatus }}</p>
+                @if(serverName!=''){
+                    <p>'Server Created '</p>
+                }
+                @else {
+                    <p>'No Server Created '</p>
+                }
+                <p *ngIf="serverCreated">Server was created!,Server Name is {{ serverCreationStatus }}</p>
             </div>
         </div>
     </div>
