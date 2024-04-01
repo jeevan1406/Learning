@@ -3,8 +3,6 @@
         <div class="col-xs-12">
             <p>servers works!</p>
             <hr>
-            <app-server></app-server>
-            <hr>
             <div>
                 <!-- <label>Server Name: </label>
                 <input type="text" 
@@ -34,8 +32,11 @@
                 @else {
                     <p>'No Server Created '</p>
                 }
-                <p *ngIf="serverCreated">Server was created!,Server Name is {{ serverCreationStatus }}</p>
+                <p *ngIf="serverCreated"></p>
             </div>
+            
+            <hr>
+            <app-server *ngFor="let server of servers"></app-server>
         </div>
     </div>
 </div>
